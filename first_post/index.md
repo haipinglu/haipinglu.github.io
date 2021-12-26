@@ -1,5 +1,0 @@
-# First post
-
-
-Testing Hugo.
-
