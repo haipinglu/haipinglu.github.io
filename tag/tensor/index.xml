@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tensor | Haiping Lu</title><link>https://haipinglu.github.io/tag/tensor/</link><atom:link href="https://haipinglu.github.io/tag/tensor/index.xml" rel="self" type="application/rss+xml"/><description>Tensor</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2021 by Haiping Lu</copyright><lastBuildDate>Sat, 13 Apr 2019 00:00:00 +0000</lastBuildDate><image><url>https://haipinglu.github.io/images/icon_huc5fd9f1b4f03f2d64add7afcb374c1e6_29577_512x512_fill_lanczos_center_3.png</url><title>Tensor</title><link>https://haipinglu.github.io/tag/tensor/</link></image><item><title>Learn from Tensors</title><link>https://haipinglu.github.io/project/msl-book/</link><pubDate>Sat, 13 Apr 2019 00:00:00 +0000</pubDate><guid>https://haipinglu.github.io/project/msl-book/</guid><description>&lt;p>
+&lt;a href="https://www.routledge.com/Multilinear-Subspace-Learning-Dimensionality-Reduction-of-Multidimensional/Lu-Plataniotis-Venetsanopoulos/p/book/9781439857243" target="_blank" rel="noopener">Multilinear Subspace Learning: Dimensionality Reduction of Multidimensional Data&lt;/a> is a book published December 16, 2013 by Chapman and Hall/CRC in the
+&lt;a href="https://www.routledge.com/Chapman--HallCRC-Machine-Learning--Pattern-Recognition/book-series/CRCMACLEAPAT" target="_blank" rel="noopener">Chapman &amp;amp; Hall/CRC Press Machine Learning and Pattern Recognition Series&lt;/a>. This page provides an overview of resources concerned with theories and applications of multilinear subspace learning (MSL).&lt;/p>
+&lt;p>The origin of MSL traces back to multi-way analysis in the 1960s and they have been studied extensively in face and gait recognition. With more connections revealed and analogies drawn between multilinear algorithms and their linear counterparts, MSL has become an exciting area to explore for applications involving large-scale multidimensional
+(tensorial) data as well as a challenging problem for machine learning researchers to tackle.&lt;/p>
+&lt;hr>
+&lt;p>[
+&lt;a href="#books">Book/Survey&lt;/a> |
+&lt;a href="#code">Software&lt;/a> |
+&lt;a href="#data">Data&lt;/a> |
+&lt;a href="#related">Related Sites&lt;/a> |
+&lt;a href="#references">Research Papers&lt;/a> ]&lt;/p>
+&lt;p>&lt;a id='books'>&lt;/a>&lt;/p>
+&lt;h2 id="a-idbooksdbook-and-surveya">&lt;a id='booksd'>Book and Survey&lt;/a>&lt;/h2>
+&lt;p>
+&lt;a href="http://www.crcpress.com/product/isbn/9781439857243" target="_blank" rel="noopener">Multilinear Subspace Learning: Dimensionality Reduction of Multidimensional Data&lt;/a>,
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/" target="_blank" rel="noopener">Haiping Lu&lt;/a>,
+&lt;a href="http://www.dsp.utoronto.ca/~kostas/" target="_blank" rel="noopener">K. N. Plataniotis&lt;/a>, and
+&lt;a href="http://www.dsp.toronto.edu/~anv/" target="_blank" rel="noopener">A. N. Venetsanopoulos&lt;/a>, Chapman &amp;amp; Hall/CRC Press Machine Learning and Pattern Recognition Series, Taylor and Francis, ISBN: 978-1-4398572-4-3, December 2013.&lt;/p>
+&lt;p>Order:
+&lt;a href="http://www.amazon.com/Multilinear-Subspace-Learning-Dimensionality-Multidimensional/dp/1439857245" target="_blank" rel="noopener">Amazon.com&lt;/a>,
+&lt;a href="http://www.amazon.ca/Multilinear-Subspace-Learning-Dimensionality-Multidimensional/dp/1439857245" target="_blank" rel="noopener">Amazon.ca&lt;/a>,
+&lt;a href="http://www.amazon.co.uk/Multilinear-Subspace-Learning-Dimensionality-Multidimensional/dp/1439857245" target="_blank" rel="noopener">Amazon.co.uk&lt;/a>,
+&lt;a href="http://www.amazon.fr/Multilinear-Subspace-Learning-Dimensionality-Multidimensional/dp/1439857245" target="_blank" rel="noopener">Amazon.fr&lt;/a>,
+&lt;a href="http://www.amazon.de/Multilinear-Subspace-Learning-Dimensionality-Multidimensional/dp/1439857245" target="_blank" rel="noopener">Amazon.de&lt;/a>,
+&lt;a href="http://www.amazon.co.jp/Multilinear-Subspace-Learning-Dimensionality-Multidimensional/dp/1439857245" target="_blank" rel="noopener">Amazon.co.jp&lt;/a>,
+&lt;a href="http://www.amazon.cn/Multilinear-Subspace-Learning-Dimensionality-Multidimensional/dp/1439857245" target="_blank" rel="noopener">亚马逊中国&lt;/a>,
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/files/MSLbook_CRC2013.pdf" target="_blank" rel="noopener">CRC Press (Save 20%)&lt;/a>&lt;br>
+Contents:
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/MSL/MSLbook-TOC.pdf" target="_blank" rel="noopener">Table of Contents&lt;/a>;
+&lt;a href="http://books.google.com.hk/books?id=4F_vAgAAQBAJ&amp;amp;printsec=frontcover&amp;amp;dq=isbn:1439857245&amp;amp;hl=en&amp;amp;sa=X&amp;amp;ei=1kG7U4uqD5L38QXc3oDICw&amp;amp;redir_esc=y#v=onepage&amp;amp;q&amp;amp;f=false" target="_blank" rel="noopener">Preview&lt;/a>&lt;br>
+Sample Chapters:
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/MSL/MSLbook-Chapter1.pdf" target="_blank" rel="noopener">Chapter 1&lt;/a>,
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/MSL/MSLbook-Chapter3.pdf" target="_blank" rel="noopener">Chapter
+3&lt;/a>&lt;br>
+Review: Recommended at computingreviews.com (
+&lt;a href="http://www.computingreviews.com/review/review_review.cfm?review_id=142849" target="_blank" rel="noopener">Review Link&lt;/a>;
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/MSL/MSLbook-ComputingReview.pdf" target="_blank" rel="noopener">PDF&lt;/a>)&lt;br>
+Errata/Corrections:
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/MSL/MSLBookErrata.pdf" target="_blank" rel="noopener">Errata - 19 Jan 2015&lt;/a>,
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/MSL/MSLbookCorrections20140215.pdf" target="_blank" rel="noopener">Corrections -15 Feb
+2014&lt;/a>&lt;br>
+Software:
+&lt;a href="#code">Open Source Software&lt;/a>&lt;br>
+Data:
+&lt;a href="#data">2D face data &amp;amp; 3D gait data&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="http://www.dsp.utoronto.ca/~haiping/Publication/SurveyMSL_PR2011.pdf" target="_blank" rel="noopener">A Survey of Multilinear Subspace Learning for Tensor
+Data&lt;/a>, Haiping Lu, K. N. Plataniotis, and A. Venetsanopoulos, Pattern Recognition, Vol. 44, No. 7, pp. 1540-1551, Jul. 2011.&lt;/p>
+&lt;h2 id="a-idcodesoftwarea">&lt;a id='code'>Software&lt;/a>&lt;/h2>
+&lt;p>Open source software on multilinear subspace learning algorithms:&lt;/p>
+&lt;ul>
+&lt;li>The
+&lt;a href="http://csmr.ca.sandia.gov/%7Etgkolda/TensorToolbox/" target="_blank" rel="noopener">Matlab Tensor Toolbox&lt;/a>&lt;/li>
+&lt;li>
+&lt;a href="http://www.mathworks.com/matlabcentral/fileexchange/26168" target="_blank" rel="noopener">MPCA&lt;/a>: the multilinear principal component analysis algorithm, a multilinear extension of PCA, including code, data and paper.&lt;/li>
+&lt;li>
+&lt;a href="http://www.mathworks.com/matlabcentral/fileexchange/35432" target="_blank" rel="noopener">UMPCA&lt;/a>: the uncorrelated multilinear principal component analysis algorithm, including code, data and paper.&lt;/li>
+&lt;li>
+&lt;a href="http://www.mathworks.com/matlabcentral/fileexchange/35782" target="_blank" rel="noopener">UMLDA&lt;/a> : the uncorrelated multilinear discriminant analysis algorithm, including code, data and paper.&lt;/li>
+&lt;/ul>
+&lt;h2 id="a-iddatadataa">&lt;a id='data'>Data&lt;/a>&lt;/h2>
+&lt;p>The FERET face data (2-D tensor, i.e, matrix) and training/test
+partitions:&lt;br>
+C=number of subjects; A=max angle;S: number of samples/subject&lt;br>
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/feretc70a15s8.zip" target="_blank" rel="noopener">C70A15S8 (3.09M)&lt;/a>;
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/feretc80a45s6.zip" target="_blank" rel="noopener">C80A45S6
+(893K)&lt;/a>;
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/feretc160a45s6.zip" target="_blank" rel="noopener">C160A45S6
+(1.32M)&lt;/a>;
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/feretc240a45s6.zip" target="_blank" rel="noopener">C240A45S6
+(1.68M)&lt;/a>;
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/feretc320a45s6.zip" target="_blank" rel="noopener">C320A45S6
+(2.04M)&lt;/a>.&lt;/p>
+&lt;p>The CMU PIE face data (2-D tensor, i.e, matrix) and training/test
+partitions:
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/piep3i3.zip" target="_blank" rel="noopener">PIEP3I3 (10.2M)&lt;/a>.&lt;/p>
+&lt;p>The USF gait data version 1.7 (3-D tensor):
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/USFGait17_128x88x20.zip" target="_blank" rel="noopener">128x88x20
+(21.2M)&lt;/a>;
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/USFGait17_64x44x20.zip" target="_blank" rel="noopener">64x44x20
+(9.9M)&lt;/a>;
+&lt;a href="http://staffwww.dcs.shef.ac.uk/people/H.Lu/CodeData/USFGait17_32x22x10.zip" target="_blank" rel="noopener">32x22x10
+(3.2M)&lt;/a>.&lt;/p>
+&lt;h2 id="a-idrelatedrelated-web-sitesa">&lt;a id='related'>Related Web Sites&lt;/a>&lt;/h2>
+&lt;p>
+&lt;a href="http://en.wikipedia.org/wiki/Multilinear_subspace_learning" target="_blank" rel="noopener">Wikipedia entry&lt;/a> on Multilinear Subspace Learning. &lt;/p>
+&lt;h2 id="a-idreferencesbibliographya">&lt;a id='references'>Bibliography&lt;/a>&lt;/h2>
+&lt;p>Papers relevant to MSL are ordered below according to topic, with
+occasional papers occurring under multiple headings.&lt;/p>
+&lt;hr>
+&lt;p>[
+&lt;a href="#tut">Tutorials&lt;/a> | 
+&lt;a href="#ttp">Tensor2Tensor&lt;/a> |
+&lt;a href="#tvp">Tensor2Vector&lt;/a> ]&lt;/p>
+&lt;h3 id="a-idtuttutorialsa">&lt;a id='tut'>Tutorials&lt;/a>&lt;/h3>
+&lt;p>Tutorial materials suitable for a first introduction to MSL.
+Prerequisites: elementary probability theory, statistics and linear
+algebra.&lt;/p>
+&lt;p>H. Lu, K. N. Plataniotis, and A. N. Venetsanopoulos,
+&lt;a href="http://www.crcpress.com/product/isbn/9781439857243" target="_blank" rel="noopener">Multilinear Subspace Learning: Dimensionality Reduction of Multidimensional
+Data&lt;/a>, Chapman &amp;amp; Hall/CRC Press Machine Learning and Pattern Recognition Series, Taylor and Francis, ISBN: 978-1-4398572-4-3, 2013.&lt;/p>
+&lt;p>H. Lu, K. N. Plataniotis, and A. N. Venetsanopoulos,
+&lt;a href="http://www.dsp.utoronto.ca/%7Ehaiping/Publication/SurveyMSL_PR2011.pdf" target="_blank" rel="noopener">A Survey of Multilinear Subspace Learning for Tensor Data&lt;/a>,
+Pattern Recognition, Vol. 44, No. 7, pp. 1540-1551, Jul.
+2011.&lt;/p>
+&lt;p>T. G. Kolda, B. W. Bader,
+&lt;a href="http://portal.acm.org/citation.cfm?id=1655230" target="_blank" rel="noopener">Tensor decompositions and applications&lt;/a>, SIAM Review, Vol. 51, No. 3, pp. 455-500, 2009.&lt;/p>
+&lt;p>L. D. Lathauwer, B. D. Moor, J. Vandewalle,
+&lt;a href="http://portal.acm.org/citation.cfm?id=354405" target="_blank" rel="noopener">On the best rank-1 and rank-(R1, R2, ..., RN ) approximation of higher-order tensors&lt;/a>,
+SIAM Journal of Matrix Analysis and Applications 21 (4) (2000)
+1324-1342.&lt;/p>
+&lt;p>L.D. Lathauwer, B.D. Moor, J. Vandewalle,
+&lt;a href="http://portal.acm.org/citation.cfm?id=354398" target="_blank" rel="noopener">A multilinear singular value decomposition&lt;/a>,
+SIAM Journal of Matrix Analysis and Applications vol. 21, no. 4, pp.
+1253-1278, 2000.&lt;/p>
+&lt;h3 id="a-idttpmsl-through-tensor-to-tensor-projectiona">&lt;a id='ttp'>MSL through Tensor-to-Tensor Projection&lt;/a>&lt;/h3>
+&lt;p>MSL algorithms that project a tensor directly to another tensor of
+lower dimension.&lt;/p>
+&lt;p>H. Lu, K. N. Plataniotis, and A. N. Venetsanopoulos,
+&lt;a href="http://www.dsp.utoronto.ca/%7Ehaiping/Publication/MPCA_TNN08_rev2010.pdf" target="_blank" rel="noopener">MPCA: Multilinear Principal Component Analysis of Tensor
+Objects&lt;/a>, IEEE Trans. on Neural Networks, Vol. 19, No. 1, Page: 18-39, Jan. 2008.&lt;/p>
+&lt;p>D. Tao, X. Li, X. Wu, and S. J. Maybank,
+&lt;a href="http://dx.doi.org/10.1109/TPAMI.2007.1096" target="_blank" rel="noopener">General tensor discriminant analysis and gabor features for gait recognition&lt;/a>, IEEE Trans. Pattern Anal. Mach. Intell., vol. 29, no. 10, pp. 1700-1715, Oct. 2007.&lt;/p>
+&lt;p>S. Yan, D. Xu, Q. Yang, L. Zhang, X. Tang, and H.-J. Zhang,
+&lt;a href="http://portal.acm.org/citation.cfm?id=1068959" target="_blank" rel="noopener">Discriminant analysis with tensor representation&lt;/a>, in Proc. IEEE Conference on Computer Vision and Pattern Recognition, vol. I, June 2005, pp. 526-532.&lt;/p>
+&lt;p>X. He, D. Cai, P. Niyogi,
+&lt;a href="http://books.nips.cc/papers/files/nips18/NIPS2005_0249.pdf" target="_blank" rel="noopener">Tensor subspace analysis&lt;/a>], in: Advances in Neural Information Processing Systemsc 18 (NeurIPS), 2005.&lt;/p>
+&lt;h3 id="a-idtvpmsl-through-tensor-to-vector-projectiona">&lt;a id='tvp'>MSL through Tensor-to-Vector Projection&lt;/a>&lt;/h3>
+&lt;p>MSL algorithms that project a tensor directly to a vector of lower
+dimension.&lt;/p>
+&lt;p>H. Lu, K. N. Plataniotis, and A. N. Venetsanopoulos,
+&lt;a href="http://www.dsp.utoronto.ca/%7Ehaiping/Publication/UMPCA_TNN09.pdf" target="_blank" rel="noopener">Uncorrelated Multilinear Principal Component Analysis for Unsupervised Multilinear Subspace Learning&lt;/a>, IEEE Trans. on Neural Networks, Vol. 20, No. 11, Page: 1820-1836, Nov. 2009.&lt;/p>
+&lt;p>H. Lu, K. N. Plataniotis, and A. N. Venetsanopoulos,
+&lt;a href="http://www.dsp.utoronto.ca/%7Ehaiping/Publication/UMLDA_TNN08.pdf" target="_blank" rel="noopener">Uncorrelated Multilinear Discriminant Analysis with Regularization and
+Aggregation for Tensor Object Recognition&lt;/a>, IEEE Trans. on Neural Networks, Vol. 20, No. 1, Page: 103-123, Jan. 2009.&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;p>This page is maintained by
+&lt;a href="https://haipinglu.github.io/" target="_blank" rel="noopener">Haiping Lu&lt;/a> and its layout design follows
+&lt;a href="http://www.gaussianprocess.org" target="_blank" rel="noopener">www.gaussianprocess.org&lt;/a>. Please send suggestions for corrections or additions via email to: hplu [at] ieee [dot] org.&lt;br>
+Latest update: December 30, 2021.&lt;/p></description></item></channel></rss>
