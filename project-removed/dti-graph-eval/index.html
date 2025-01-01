@@ -1,0 +1,321 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.3.0 for Hugo">
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<meta name=author content="Haiping Lu">
+<meta name=description content="Hierarchical clustering split for low-bias evaluation of drug-target interaction prediction">
+<link rel=alternate hreflang=en-us href=https://haipinglu.github.io/project-removed/dti-graph-eval/>
+<meta name=theme-color content="#1565c0">
+<link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin=anonymous media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<link rel=stylesheet href=/css/wowchemy.63638f5ebe2af2c45dadecbd6a6c3fa9.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-15061QLZDF"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a,b){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){b!=='_blank'&&(document.location=a)}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target,a.target.getAttribute('target'))}gtag('js',new Date),gtag('config','G-15061QLZDF',{}),gtag('set',{cookie_flags:'SameSite=None;Secure'}),document.addEventListener('click',onClickCallback,!1)</script>
+<link rel=manifest href=/manifest.webmanifest>
+<link rel=icon type=image/png href=/media/icon_huc5fd9f1b4f03f2d64add7afcb374c1e6_29577_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_huc5fd9f1b4f03f2d64add7afcb374c1e6_29577_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://haipinglu.github.io/project-removed/dti-graph-eval/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@haipinglu">
+<meta property="twitter:creator" content="@haipinglu">
+<meta property="og:site_name" content="Haiping Lu">
+<meta property="og:url" content="https://haipinglu.github.io/project-removed/dti-graph-eval/">
+<meta property="og:title" content="Low-Bias Evaluation of Drug-Target Interaction | Haiping Lu">
+<meta property="og:description" content="Hierarchical clustering split for low-bias evaluation of drug-target interaction prediction"><meta property="og:image" content="https://haipinglu.github.io/project-removed/dti-graph-eval/featured.png">
+<meta property="twitter:image" content="https://haipinglu.github.io/project-removed/dti-graph-eval/featured.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2021-12-11T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-12-11T00:00:00+00:00">
+<title>Low-Bias Evaluation of Drug-Target Interaction | Haiping Lu</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=9632445c7e92e8448fe40a0411cbb8fd>
+<script src=/js/wowchemy-init.min.2da3b1fa37e894630bf6de39b1b694b3.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Haiping Lu</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Haiping Lu</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-end" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#projects><span>Research</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#featured><span>Publication</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#teaching><span>Teaching</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#codedata><span>Code/Data</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#people><span>Team</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div class=page-body>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Low-Bias Evaluation of Drug-Target Interaction</h1>
+<div class=article-metadata>
+<div>
+<span>
+<a href=/authors/peizhen-bai/>Peizhen Bai</a></span>, <span>
+<a href=/authors/filip-miljkovic/>Filip Miljković</a></span>, <span>
+<a href=/authors/bino-john/>Bino John</a></span>, <span>
+<a href=/authors/haiping-lu/>Haiping Lu</a></span>
+</div>
+<span class=article-date>
+Dec 11, 2021
+</span>
+</div>
+</div>
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:367px>
+<div style=position:relative>
+<img src=/project-removed/dti-graph-eval/featured_hu004839ed646632877b6a18e7b668ad5b_494215_720x0_resize_lanczos_3.png width=720 height=367 alt class=featured-image>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<p>This project is in collaboration with AstraZeneca.</p>
+<p>Drug-target interaction (DTI) prediction is important in drug discovery and chemogenomics studies. Machine learning, particularly deep learning, has advanced this area significantly over the past few years. However, a significant gap between the performance reported in academic papers and that in practical drug discovery settings, e.g. the random-split-based evaluation strategy tends to be too optimistic in estimating the prediction performance in real-world settings. Such performance gap is largely due to hidden data bias in experimental datasets and inappropriate data split.</p>
+<p>In this project, we construct a low-bias DTI dataset and study more challenging data split strategies to improve performance evaluation for real-world settings. Specifically, we study the data bias in a popular DTI dataset, BindingDB, and re-evaluate the prediction performance of three state-of-the-art deep learning models using five different data split strategies: random split, cold drug split, scaffold split, and two hierarchical-clustering-based splits. In addition, we comprehensively examine six performance metrics. Our experimental results confirm the overoptimism of the popular random split and show that hierarchical-clustering-based splits are far more challenging and can provide potentially more useful assessment of model generalizability in real-world DTI prediction settings.</p>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/graph-machine-learning/>Graph Machine Learning</a>
+<a class="badge badge-light" href=/tag/deep-learning/>Deep Learning</a>
+<a class="badge badge-light" href=/tag/bioinformatics/>Bioinformatics</a>
+</div>
+<div class=share-box>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://haipinglu.github.io/project-removed/dti-graph-eval/&text=Low-Bias%20Evaluation%20of%20Drug-Target%20Interaction" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://haipinglu.github.io/project-removed/dti-graph-eval/&t=Low-Bias%20Evaluation%20of%20Drug-Target%20Interaction" target=_blank rel=noopener class=share-btn-facebook aria-label=facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Low-Bias%20Evaluation%20of%20Drug-Target%20Interaction&body=https://haipinglu.github.io/project-removed/dti-graph-eval/" target=_blank rel=noopener class=share-btn-email aria-label=envelope>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/shareArticle?url=https://haipinglu.github.io/project-removed/dti-graph-eval/&title=Low-Bias%20Evaluation%20of%20Drug-Target%20Interaction" target=_blank rel=noopener class=share-btn-linkedin aria-label=linkedin-in>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=Low-Bias%20Evaluation%20of%20Drug-Target%20Interaction%20https://haipinglu.github.io/project-removed/dti-graph-eval/" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="https://service.weibo.com/share/share.php?url=https://haipinglu.github.io/project-removed/dti-graph-eval/&title=Low-Bias%20Evaluation%20of%20Drug-Target%20Interaction" target=_blank rel=noopener class=share-btn-weibo aria-label=weibo>
+<i class="fab fa-weibo"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=/authors/peizhen-bai/><img class="avatar mr-3 avatar-circle" src=/authors/peizhen-bai/avatar_hue5160dd751d3cb9e2360567f4f150639_28219_270x270_fill_q75_lanczos_center.jpg alt="Peizhen Bai"></a>
+<div class=media-body>
+<h5 class=card-title><a href=/authors/peizhen-bai/>Peizhen Bai</a></h5>
+<h6 class=card-subtitle>PhD Student</h6>
+<ul class=network-icon aria-hidden=true>
+</ul>
+</div>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=/authors/filip-miljkovic/><img class="avatar mr-3 avatar-circle" src=/authors/filip-miljkovic/avatar_hu14860a8c5e17820a80e05a585e3b16b4_42602_270x270_fill_q75_lanczos_center.jpg alt="Filip Miljković"></a>
+<div class=media-body>
+<h5 class=card-title><a href=/authors/filip-miljkovic/>Filip Miljković</a></h5>
+<h6 class=card-subtitle>Senior Scientist at AstraZeneca</h6>
+<ul class=network-icon aria-hidden=true>
+</ul>
+</div>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=/authors/bino-john/><img class="avatar mr-3 avatar-circle" src=/authors/bino-john/avatar_hu00a7ea15fa98d6615625f5b2e9b5f6c7_41135_270x270_fill_q75_lanczos_center.jpg alt="Bino John"></a>
+<div class=media-body>
+<h5 class=card-title><a href=/authors/bino-john/>Bino John</a></h5>
+<h6 class=card-subtitle>Global Team Leader at AstraZeneca</h6>
+<ul class=network-icon aria-hidden=true>
+</ul>
+</div>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://haipinglu.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/haiping-lu/avatar_hucb84e28ca1e19b7e1577e26fab350297_1984751_270x270_fill_q75_lanczos_center.jpg alt="Haiping Lu"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://haipinglu.github.io/>Haiping Lu</a></h5>
+<h6 class=card-subtitle>Director of the UK Open Multimodal AI Network, Professor of Machine Learning, and Head of AI Research Engineering</h6>
+<p class=card-text>I am a Professor of Machine Learning. I develop translational multimodal AI technologies for advancing healthcare and scientific discovery.</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=mailto:h.lu@sheffield.ac.uk>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://uk.linkedin.com/in/haiping-lu-4821206 target=_blank rel=noopener>
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/haipinglu target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.co.uk/citations?user=CArrsDMAAAAJ" target=_blank rel=noopener>
+<i class="ai ai-google-scholar"></i>
+</a>
+</li>
+<li>
+<a href=https://www.youtube.com/c/haipinglu target=_blank rel=noopener>
+<i class="fab fa-youtube"></i>
+</a>
+</li>
+<li>
+<a href=https://medium.com/@haipinglu/ target=_blank rel=noopener>
+<i class="fab fa-blogger-b"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/haipinglu target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href=/files/cv.pdf>
+<i class="ai ai-cv"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+© 2025 by Haiping Lu
+</p>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+<script src=/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js></script>
+<script src=https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js crossorigin=anonymous></script>
+<script id=search-hit-fuse-template type=text/x-template>
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+<script src=https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin=anonymous></script>
+<script src=/en/js/wowchemy.min.7cd6ec29d281a73c92a2958a1584aadc.js></script>
+</body>
+</html>
